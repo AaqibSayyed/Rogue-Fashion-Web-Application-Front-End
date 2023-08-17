@@ -1,0 +1,100 @@
+/* css reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#backgroundImageLogin{
+    /* border: 2px solid greenyellow; */
+    background-image: url('../images/pexels-antoni-shkraba-production-8973457.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width:100%;
+    z-index: -2;
+}
+
+#formcontainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 600px;
+}
+
+
+#loginForm{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    /* border: 2px solid black; */
+    height: 63vh;
+    width: 60vh;
+    margin-top: 46px;
+    box-shadow: 20px 20px 40px whitesmoke;
+}
+
+#loginForm::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 0%;
+    left: 0;
+    height: 90%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+    margin-top: 40px;
+
+}
+
+#zenLogin {
+    margin-top: 6%;
+}
+
+#zenLogin a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-weight: bold;
+
+}
+
+#login{
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+}
+
+#login input{    
+    padding:20px;
+    margin: 3px
+}
+
+
+#login input[type=submit]{
+    margin-top:20px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+#login input[type=submit]:hover{
+    color:grey;
+    cursor: pointer;
+}
+
+#forgetPassword{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#forgetPassword a{
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+#forgetPassword a:hover{
+   color: grey;
+}

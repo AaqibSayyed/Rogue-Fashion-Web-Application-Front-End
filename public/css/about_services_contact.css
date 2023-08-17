@@ -1,0 +1,110 @@
+/* css reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#about-contact-services-container {
+
+    display: flex;
+    /* border: 2px solid blue; */
+    background-image: url('../images/bg_about_services_contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 71.3vh;
+    gap: 10px;
+}
+
+
+#about-contact-services-content {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 30%;
+    /* text-align: center; */
+    /* align-items: center; */
+    justify-content: center;
+}
+
+#about-contact-services-pic {
+    display: flex;
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#about-contact-services-heading {
+    font-size: 2rem;
+    margin: 3%;
+}
+
+#about-contact-services-img {
+    margin-top: 3%;
+    height: 300px;
+    width: 600px;
+    border-radius: 4px;
+    box-shadow: 20px 20px 40px;
+}
+
+#services-img {
+    margin-top: 3%;
+    height: 300px;
+    width: 500px;
+    border-radius: 4px;
+    box-shadow: 20px 20px 40px;
+}
+
+#services-heading {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#services-content {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    height: 320px;
+    width: 300px;
+    /* text-align: center; */
+    /* align-items: center; */
+    justify-content: center;
+    /* background-color: #00000005; */
+    box-shadow: 20px 20px 40px;
+}
+
+#services-content input,
+textarea {
+    margin: 2px 20px;
+    padding: 10px;
+}
+
+
+#services-content input[type='submit'] {
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.925);
+    color: whitesmoke;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+}
+
+#services-content input[type='submit']:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+
+#iframe-map{
+    height: 300px;
+    width: 650px;
+    box-shadow: 20px 20px 40px;
+}

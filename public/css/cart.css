@@ -1,0 +1,21 @@
+.cart-container{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    margin: 1rem 7rem;
+}
+
+.cart-container-line{
+    width: 50%;
+    margin:  1rem auto;
+
+}
+
+.plus-minus-cart{
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 0.6rem;
+    width: 0.6rem;
+    margin: -0.1rem 0.7rem;
+}

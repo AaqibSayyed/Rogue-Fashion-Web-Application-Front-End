@@ -1,0 +1,80 @@
+/* css reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#backgroundImage{
+    display: flex;
+    /* border: 2px solid salmon; */
+    background-image: url('../images/pexels-juan-mendez-1536619.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    align-items: center;
+
+}
+
+
+
+
+#register{
+    display: flex;
+    position: relative;
+    /* border: 2px solid black; */
+    height: 55vh;
+    width: 25%;
+    flex-direction: column;
+    box-shadow: 20px 20px 50px grey;
+    margin:5%;
+    background-color: rgba(255, 255, 255, 0.418);
+
+}
+
+#zen a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+#zen{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#registerform{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    padding: 4%;
+}
+
+#registerform form {
+    display: flex;
+    flex-direction: column;
+}
+
+#registerform  input{
+    margin:1% 0;
+    padding: 4%
+}
+
+#registerform input[type=submit]{
+    margin-top:7%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+
+#registerform input[type=submit]:hover{
+    color:grey;
+}
+
