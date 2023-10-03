@@ -1,9 +1,8 @@
-import { React } from 'react'
-import { useGlobalProductContext } from '../context/productcontext'
+import { useGlobalProductContext } from '../context/productContext'
 import MainProductPage from './MainProductPage'
 import Title from '../component/Title'
 import Filter from '../component/Filter'
-
+import '../assets/css/product.css'
 
 function KidProductPage() {
   const { kid_products } = useGlobalProductContext()

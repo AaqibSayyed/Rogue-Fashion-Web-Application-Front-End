@@ -1,12 +1,15 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa";
-import {useCartContext} from '../context/cart_context'
+import { useCartContext } from '../context/cartContext'
+import '../assets/css/cart.css'
+
+
 
 function CartDetails(currEleme) {
 
     const { id, name, amount, quantity, image, stock } = currEleme
-    const {removeCartItem} = useCartContext()
+    const { removeCartItem } = useCartContext()
     // id: product.id,
     // name: product.name, 
     // imgae: product.single_product_image,
@@ -39,9 +42,9 @@ function CartDetails(currEleme) {
 
 
                 <div style={{ width: "20%" }}>₹{amount * quantityCount}</div>
-                <div style={{ width: "20%" }}><FaTrash style={{color:"red", cursor:"pointer"}} onClick={()=>{
+                <div style={{ width: "20%" }}><FaTrash style={{ color: "red", cursor: "pointer" }} onClick={() => {
                     removeCartItem(id)
-                }}/></div>
+                }} /></div>
 
             </div>
 

@@ -1,6 +1,6 @@
-import { React, useState } from 'react'
-import {useNavigate} from 'react-router-dom'
-
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import '../assets/css/forgetPassword.css'
 
 const ForgetPassword = () => {
     let navigate = useNavigate()
@@ -13,15 +13,14 @@ const ForgetPassword = () => {
     function getDetails(e) {
         name = e.target.name
         value = e.target.value
-        setInput ({[name]: value })
-        console.log(input)
+        setInput({ [name]: value })
     }
 
     async function postDetails(e) {
         e.preventDefault()
         let fetched_details = await fetch('/forgetpassword', {
             method: "post",
-            headers: {"content-type": "application/JSON"},
+            headers: { "content-type": "application/JSON" },
             body: JSON.stringify({
                 user_email: input.email
             })

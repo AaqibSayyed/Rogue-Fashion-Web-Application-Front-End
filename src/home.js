@@ -1,5 +1,5 @@
-import Services from './component/services';
-import HomeSection from './component/home_section';
+import Services from './component/Services';
+import HomeSection from './component/HomeSection';
 
 
 function Home() {

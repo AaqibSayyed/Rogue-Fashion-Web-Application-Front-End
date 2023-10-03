@@ -1,5 +1,6 @@
 import {React, useState} from 'react'
 import {useNavigate} from 'react-router-dom'
+import '../assets/css/resetPassword.css'
 
 const ResetPassword = () => {
     let navigate= useNavigate()
@@ -16,14 +17,14 @@ const ResetPassword = () => {
         name=e.target.name
         value=e.target.value
         setInput({...input, [name]:value})
-        console.log(input)
+        // console.log(input)
     }
 
 
     async function postDetails(e){
         e.preventDefault()
         let number_opt = Number.parseInt(input.otp)
-        console.log(typeof number_opt)
+        // console.log(typeof number_opt)
 
         let fetched_details = await fetch('/resetpassword',{
             method: 'PUT',
@@ -37,14 +38,14 @@ const ResetPassword = () => {
              
         }).catch((error)=>{return {error}})
 
-        console.log(fetched_details)
+        // console.log(fetched_details)
 
         if (!fetched_details || (fetched_details && fetched_details.error)){
             alert(fetched_details.error)
         }
         
         let data = await fetched_details.json().catch((error)=>{return {error}})
-        console.log(data)
+        // console.log(data)
 
         if (!data || (data && data.error)){
             alert(data.error)

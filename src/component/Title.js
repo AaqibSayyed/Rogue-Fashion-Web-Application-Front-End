@@ -1,10 +1,11 @@
-import {React, useEffect, useState} from 'react'
 import { NavLink } from 'react-router-dom'
-import { useGlobalProductContext } from '../context/productcontext'
+import { useGlobalProductContext } from '../context/productContext'
+import '../assets/css/productDetails.css'
 
-function Title({category}) {
 
-  const {getFilterValues, filter} = useGlobalProductContext()
+function Title({ category }) {
+
+  const { getFilterValues, filter } = useGlobalProductContext()
 
   // function getValues(event){
   //      let name = event.target.name
@@ -18,16 +19,16 @@ function Title({category}) {
 
   return (
     <>
-    
-  <div className='style-link-product'>
-  <NavLink to='/' className='go-back'><strong>HOME</strong></NavLink><strong > / {category}'s Category</strong>
-  </div>
 
-  <div className='Input-search'>
-    <form onSubmit={(e)=>{e.preventDefault()}}>
-    <input type='text' name='text'  value ={filter.text} placeholder='Search Your Fashion' onChange={getFilterValues}/>
-    </form>
-  </div>
+      <div className='style-link-product'>
+        <NavLink to='/' className='go-back'><strong>HOME</strong></NavLink><strong > / {category}'s Category</strong>
+      </div>
+
+      <div className='Input-search'>
+        <form onSubmit={(e) => { e.preventDefault() }}>
+          <input type='text' name='text' value={filter.text} placeholder='Search Your Fashion' onChange={getFilterValues} />
+        </form>
+      </div>
 
     </>
   )

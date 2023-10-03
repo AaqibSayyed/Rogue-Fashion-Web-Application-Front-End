@@ -1,4 +1,4 @@
-import {HashLink} from 'react-router-hash-link'
+import '../assets/css/index.css'
 
 function HomeSection() {
 
@@ -19,10 +19,7 @@ function HomeSection() {
                     <a href="#slider-img-3" className="button"></a>
                     <a href="#slider-img-4" className="button"></a>
                 </div>
-                {/* <div id="homeContainer">
-                <p ><strong>Shop now to avail exciting offers!!!<br />Redem your Coupons Now!!!</strong></p>
-                <HashLink to='/#services'><button type="button" className="homeButton">Shop Now</button></HashLink>
-                </div> */}
+
             </div>
         </>
     )

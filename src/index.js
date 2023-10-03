@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { AppProvider } from './context/productcontext';
-import { FilterContextProvider } from './context/filterContext';
-import { CartProvider } from './context/cart_context';
+import { AppProvider } from './context/productContext';
+import { CartProvider } from './context/cartContext';
+import { Provider } from 'react-redux';
+import store from './reduxToolkit/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
   <AppProvider>
-    <FilterContextProvider>
       <CartProvider>
+      <Provider store={store}>
   <App />
+    </Provider>
     </CartProvider>
-  </FilterContextProvider>
   </AppProvider>
   </>
 );

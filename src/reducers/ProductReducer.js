@@ -1,6 +1,3 @@
-// ye hamara reducer method hai jo state and action arguments me leta hai or dispatch me bataye gyi condition ke according 
-// state update karta hai.. dispatch me jo payload define kiya hai wo hum yaha action se access kar sakte hai 
-
 const ProductReducer = (state, action) => {
 
     switch (action.type) {
@@ -61,12 +58,10 @@ const ProductReducer = (state, action) => {
 
 
 
-            console.log('i am from text', text)
 
 
             if (text) {
                 filter_men_product = copy_men_products.filter((currElement) => {
-                    console.log('is it coming here in text')
                     return currElement.name.toLowerCase().includes(text.toLowerCase())
                 })
                 filter_women_product = copy_women_products.filter((currElement) => {

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom"
+import '../assets/css/register.css'
 
 function Register() {
     const navigate = useNavigate()
@@ -20,7 +21,7 @@ function Register() {
 
 
     async function postDetails(e) {
-        e.preventDefault() // prevent a from from submission
+        e.preventDefault() // prevent a from from refresh when submitted 
 
         const { name, email, password } = input
         let input_values = JSON.stringify({
@@ -36,19 +37,19 @@ function Register() {
 
             body: input_values
 
-        }).catch((error)=>{return {error}})
+        }).catch((error) => { return { error } })
 
-        console.log(fetched_details)
+        // console.log(fetched_details)
 
         if (fetched_details.error) {
-            alert(`i am from fecthed ${fetched_details.error}`)
+            alert(fetched_details.error)
         }
 
-        const register_data = await fetched_details.json().catch((error)=>{return {error}})
+        const register_data = await fetched_details.json().catch((error) => { return { error } })
 
-        console.log(register_data)
-        
-        if (!register_data || register_data.error || register_data.status === 400) {
+        // console.log(register_data)
+
+        if (register_data.error) {
             alert(register_data.error)
         }
         else {
@@ -64,17 +65,17 @@ function Register() {
         <>
 
             <div id="backgroundImage">
-            <div id="register">
-                <div id="zen"><h2><Link to='/'>ZEN's</Link></h2></div>
-                <div id="registerform">
-                    <form method='POST'>
-                        <input type="text" name="name" value={input.name} onChange={getValues} placeholder="Name" required />
-                        <input type="email" name="email" value={input.email} onChange={getValues} placeholder="Email Address" required />
-                        <input type="password" name="password" value={input.password} onChange={getValues} placeholder="Password" required />
-                        <input type="submit" value="Sign Up" onClick={postDetails} />
-                    </form>
+                <div id="register">
+                    <div id="zen"><h2><Link to='/'>ZEN's</Link></h2></div>
+                    <div id="registerform">
+                        <form method='POST'>
+                            <input type="text" name="name" value={input.name} onChange={getValues} placeholder="Name" required />
+                            <input type="email" name="email" value={input.email} onChange={getValues} placeholder="Email Address" required />
+                            <input type="password" name="password" value={input.password} onChange={getValues} placeholder="Password" required />
+                            <input type="submit" value="Sign Up" onClick={postDetails} />
+                        </form>
+                    </div>
                 </div>
-            </div>
             </div>
 
         </>

@@ -1,7 +1,8 @@
-import React from 'react'
 import {NavLink} from 'react-router-dom'
+import '../assets/css/index.css'
 
-function footer() {
+
+function Footer() {
   return (
     <>
 
@@ -56,4 +57,4 @@ function footer() {
   )
 }
 
-export default footer
+export default Footer

@@ -1,5 +1,5 @@
-import React from 'react'
-import OurServicesPic from './pexels-mart-production-7679450.jpg'
+import OurServicesPic from '../assets/images/pexels-mart-production-7679450.jpg'
+import '../assets/css/aboutServicesContact.css'
 
 function OurServices() {
     return (

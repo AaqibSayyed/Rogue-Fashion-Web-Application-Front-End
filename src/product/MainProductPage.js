@@ -1,5 +1,5 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
+import '../assets/css/product.css'
 
 function MainProductPage(element) {
   const { slug, name, product_images, total_amount, brand } = element

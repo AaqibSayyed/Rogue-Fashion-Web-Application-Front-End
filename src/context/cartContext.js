@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 import reducer from "../reducers/cartReducer";
 
 const CartContext = createContext();
@@ -8,12 +8,10 @@ const initialState = {
   total_item: "",
   total_amount: "",
   shipping_fee: 50,
-  aayi:""
 };
 
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log('state me kya hai ', state)
 
   
   const addToCart = (amount, product) => {

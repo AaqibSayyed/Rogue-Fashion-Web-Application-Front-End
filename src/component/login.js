@@ -1,7 +1,29 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { userData } from '../reduxToolkit/slices/userSlice';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux'
+import '../assets/css/login.css'
 
 function Login() {
+    const dispatch = useDispatch()
+    let navigate = useNavigate()
+    const { isloading, user_login, userDetails } = useSelector((state) => { return state.user })
+
+    const my_user = [{ userLoggedIn: user_login }, userDetails]
+    // console.log('my_user', my_user)
+
+    localStorage.setItem("UserLoggedIn", JSON.stringify(my_user))
+    // setUserLogin (JSON.parse(localStorage.getItem('UserLoggedIn')))
+
+    useEffect(() => {
+        if (user_login) {
+            navigate('/')
+        }
+    })
+
+
+
 
     let [input, setInput] = useState(
         {
@@ -10,7 +32,6 @@ function Login() {
         }
     )
 
-    let navigate = useNavigate()
 
     let name, value;
 
@@ -23,37 +44,17 @@ function Login() {
     }
 
 
-    async function postDetails(e) {
+
+    function postDetails(e) {
         e.preventDefault()
-        let fetched_details = await fetch('/login', {
-            method: 'post',
-            headers: {
-                "content-type": "application/JSON"
-            },
+        dispatch(userData(input))
 
-            body: JSON.stringify({
-                user_email: input.eamil,
-                user_password: input.password
-            })
-
-        }).catch((error) => { return { error } })
-
-        if (fetched_details.error) {
-            alert(fetched_details.error)
-        }
-
-        let data = await fetched_details.json().catch((error) => { return { error } })
-
-        if (!data || (data && data.error)) {
-            alert(data.error)
-        }
-        else {
-            alert(data.data)
-        }
     }
+
 
     return (
         <>
+
             <div id="backgroundImageLogin">
                 <div id="formcontainer">
                     <div id="loginForm">
