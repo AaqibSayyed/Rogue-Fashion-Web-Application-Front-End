@@ -1,4 +1,4 @@
-import './assets/css/loader.css'; // You can style the loader in a separate CSS file
+import './assets/css/loader.css'; 
 
 const Loader = () => {
   return (
